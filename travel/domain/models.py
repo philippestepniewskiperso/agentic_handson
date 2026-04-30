@@ -7,3 +7,10 @@ class TravelRequest(BaseModel):
 
 class TravelAdvice(BaseModel):
     pass
+
+
+class Weather(BaseModel):
+    date: str
+    temperature: float
+    precipitation: float
+    sunshine: float
