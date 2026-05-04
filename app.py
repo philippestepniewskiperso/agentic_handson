@@ -1,10 +1,9 @@
 import chainlit as cl
 from pydantic_ai.messages import ModelMessage
-
+from dotenv import load_dotenv
 from travel.domain.agent import agent
-import travel.tools.weather  # noqa: F401 — registers weather_tool on agent
-import travel.tools.location  # noqa: F401 — registers location_tool on agent
 
+load_dotenv()
 
 @cl.on_chat_start
 async def start():
