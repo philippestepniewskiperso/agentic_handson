@@ -1,5 +1,8 @@
 # Hands-on Pydantic AI
 
+
+L'objectif du hands-on est de faire un agent de planification de voyage en fonction de la météo :)
+
 ## Setup
 
 ```bash
