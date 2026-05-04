@@ -1,7 +1,7 @@
 import chainlit as cl
 from pydantic_ai.messages import ModelMessage
 from dotenv import load_dotenv
-from travel.domain.agent import agent
+from travel.domain.agent import travel_agent
 
 load_dotenv()
 
@@ -15,8 +15,8 @@ async def main(message: cl.Message):
     history: list[ModelMessage] = cl.user_session.get("history")
 
     response = await cl.Message(content="").send()
-    async with agent.run_stream(message.content, message_history=history) as result:
-        if agent.output_type is None or agent.output_type is str:
+    async with travel_agent.run_stream(message.content, message_history=history) as result:
+        if travel_agent.output_type is None or travel_agent.output_type is str:
             async for chunk in result.stream_text(delta=True):
                 await response.stream_token(chunk)
         else:

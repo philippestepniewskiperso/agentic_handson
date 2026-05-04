@@ -11,10 +11,10 @@ model = BedrockConverseModel(
     provider=BedrockProvider(region_name=os.environ.get("AWS_DEFAULT_REGION")),
 )
 
-agent = Agent(model=model,
-              output_type = TravelPlan,
-              system_prompt="Tu es un assistant de planification de voyage."
+travel_agent = Agent(model=model,
+                     output_type = TravelPlan,
+                     system_prompt="Tu es un assistant de planification de voyage."
                             "Utilise toujours weathertool et location tool avant de produire le résultat final."
                             "Adapte tes suggestions à la météo prévue et explique tes choix. "
 
-              )
+                     )

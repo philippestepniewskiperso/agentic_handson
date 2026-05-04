@@ -1,11 +1,11 @@
 import httpx
 from pydantic_extra_types.coordinate import Longitude, Latitude
 
-from travel.domain.agent import agent
+from travel.domain.agent import travel_agent
 from travel.domain.models import Location
 
 
-@agent.tool_plain
+@travel_agent.tool_plain
 def location_tool(city_name: str) -> Location:
     """
     Tool to retrieve city coordinates
