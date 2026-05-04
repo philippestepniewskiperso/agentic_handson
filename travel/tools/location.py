@@ -7,6 +7,11 @@ from travel.domain.models import Location
 
 @agent.tool_plain
 def location_tool(city_name: str) -> Location:
+    """
+    Tool to retrieve city coordinates
+    :param city_name: City name in string
+    :return: Location object with latitude and longitude
+    """
     with httpx.Client() as client:
         r = client.get(
             "https://geocoding-api.open-meteo.com/v1/search",
