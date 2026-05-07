@@ -1,17 +1,16 @@
 import httpx
 from pydantic_extra_types.coordinate import Longitude, Latitude
 
-from travel.domain.agent import travel_agent
 from travel.domain.models import Location
 
 
-@travel_agent.tool_plain
 def location_tool(city_name: str) -> Location:
     """
     Tool to retrieve city coordinates
     :param city_name: City name in string
     :return: Location object with latitude and longitude
     """
+    print("Running tool 'location_tool'")
     with httpx.Client() as client:
         r = client.get(
             "https://geocoding-api.open-meteo.com/v1/search",

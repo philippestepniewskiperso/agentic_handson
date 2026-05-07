@@ -1,15 +1,11 @@
-import logging
-
-import openmeteo_requests
 from datetime import datetime, timedelta, UTC
 
+import openmeteo_requests
 from pydantic_extra_types.coordinate import Longitude, Latitude
 
-from travel.domain.agent import travel_agent
 from travel.domain.models import Weather, Location
 
 
-@travel_agent.tool_plain
 def weather_tool(
         location: Location, start_date: str, end_date: str
 ) -> list[Weather]:

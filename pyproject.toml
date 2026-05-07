@@ -10,4 +10,5 @@ dependencies = [
     "pydantic-ai>=1.88.0",
     "pydantic-extra-types>=2.11.1",
     "chainlit>=2.0.0",
+    "pydantic>=2.13.3",
 ]

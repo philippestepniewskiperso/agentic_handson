@@ -1135,6 +1135,7 @@ dependencies = [
     { name = "chainlit" },
     { name = "numpy" },
     { name = "openmeteo-requests" },
+    { name = "pydantic" },
     { name = "pydantic-ai" },
     { name = "pydantic-extra-types" },
 ]
@@ -1144,6 +1145,7 @@ requires-dist = [
     { name = "chainlit", specifier = ">=2.0.0" },
     { name = "numpy", specifier = ">=2.4.4" },
     { name = "openmeteo-requests", specifier = ">=1.7.5" },
+    { name = "pydantic", specifier = ">=2.13.3" },
     { name = "pydantic-ai", specifier = ">=1.88.0" },
     { name = "pydantic-extra-types", specifier = ">=2.11.1" },
 ]

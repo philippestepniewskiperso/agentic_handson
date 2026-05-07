@@ -28,3 +28,7 @@ class TravelPlan(BaseModel):
 class Location(BaseModel):
     latitude: Latitude
     longitude: Longitude
+
+
+class TravelResponse(BaseModel):
+    response:str = Field(description="A nice response presenting the travel plan in a human-friendly way")
